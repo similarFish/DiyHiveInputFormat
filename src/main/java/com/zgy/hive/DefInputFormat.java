@@ -19,7 +19,7 @@ public class DefInputFormat extends FileInputFormat<LongWritable, Text> implemen
     public RecordReader<LongWritable, Text> getRecordReader(InputSplit inputSplit, JobConf jobConf, Reporter reporter) throws IOException {
         reporter.setStatus(inputSplit.toString());
         //String delimiter = jobConf.get("textinputformat.record.line.delimiter");
-        String delimiter = "#^#@%$#";
+        String delimiter = "\004";
         byte[] recordDelimiterBytes = null;
         if (delimiter != null){
             recordDelimiterBytes = delimiter.getBytes(Charsets.UTF_8);
@@ -38,6 +38,49 @@ public class DefInputFormat extends FileInputFormat<LongWritable, Text> implemen
         if (codec == null){
             return true;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                          
         return codec instanceof SplittableCompressionCodec;
     }
 }
